@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_outer_classname = "visionProto";
+
+message visionGear{
+	bool imageValid = 1;
+	int32 vertOffsetPx = 2;
+	int32 horOffsetPx = 3;
+	double distanceIn = 4;
+	double angleD = 5;}
+	
+message visionBoiler{
+	bool imageValid = 1;
+	int32 vertOffsetPx = 2;
+	int32 horOffsetPx = 3;
+	double distanceIn = 4;
+	double angleD = 5;
+	int32 fallingFuel = 6;}
