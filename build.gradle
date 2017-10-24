@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'application'
+repositories{
+  mavenCentral()
+}
+
+
+dependencies {
+  // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+  compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.4.0'
+
+}
+
+sourceSets {
+  main{
+    java {
+      srcDir 'src'
+    }
+  }
+}
+
+task hello(dependsOn: 'jar', type: JavaExec){
+  classpath = sourceSets.main.runtimeClasspath
+  main = "org.wlrobotics.java.main.HelloWorld"
+
+}

@@ -1,7 +1,7 @@
-package protobuf;
+package org.wlrobotics.java.main;
 
-import protobuf.visionProto.visionBoiler;
-import protobuf.visionProto.visionGear;
+import org.wlrobotics.java.main.visionProto.visionBoiler;
+import org.wlrobotics.java.main.visionProto.visionGear;
 
 public class TestingProtobuf {
 	

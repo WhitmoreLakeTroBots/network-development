@@ -1,11 +1,11 @@
-package protobuf;
+package org.wlrobotics.java.main;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import protobuf.visionProto.visionGear;
+import org.wlrobotics.java.main.visionProto.visionGear;
 
 public class VisionGearReciver {
 	

@@ -1,4 +1,4 @@
-package protobuf;
+package org.wlrobotics.java.main;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import protobuf.visionProto.visionGear;
+import org.wlrobotics.java.main.visionProto.visionGear;
 
 public class VisionGearMessager {
 	

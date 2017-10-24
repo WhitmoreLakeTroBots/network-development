@@ -1,8 +1,8 @@
-package protobuf;
+package org.wlrobotics.java.main;
 
 import java.io.IOException;
 
-import protobuf.VisionGearReciver;
+import org.wlrobotics.java.main.VisionGearReciver;
 
 public class VisionGearReciverLaucher {
 
