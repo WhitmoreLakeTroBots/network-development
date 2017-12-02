@@ -1,13 +1,14 @@
 package org.wlrobotics.java.main;
 
 import java.io.IOException;
+import java.net.ConnectException;
 import java.net.UnknownHostException;
 
 import org.wlrobotics.java.main.VisionGearMessager;
 
 public class VisionGearMessagerLancher {
 	
-	public static void main(String[] args) throws UnknownHostException, IOException, InterruptedException {
+	public static void main(String[] args) throws UnknownHostException, IOException, InterruptedException, ConnectException {
 		System.out.println("Hello Gradle...");
 		VisionGearMessager message = new VisionGearMessager();
 		// TODO Auto-generated method stub
