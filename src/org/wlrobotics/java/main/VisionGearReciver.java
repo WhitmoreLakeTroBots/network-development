@@ -16,7 +16,7 @@ public class VisionGearReciver {
 	public VisionGearReciver() throws IOException{
 	serverSocket = new ServerSocket(100);
 	socket = serverSocket.accept();
-	in = new ObjectInputStream(socket.getInputStream());
+	
 	}
 	
 	void acceptConnection() throws IOException{
@@ -24,6 +24,7 @@ public class VisionGearReciver {
 	}
 	
 	visionGear reciveGearData() throws ClassNotFoundException, IOException{
+		in = new ObjectInputStream(socket.getInputStream());
 		visionGear data = (visionGear) in.readObject();
 		return data;
 	}
