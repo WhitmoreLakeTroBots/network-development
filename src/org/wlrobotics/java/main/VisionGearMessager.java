@@ -35,7 +35,7 @@ public class VisionGearMessager {
 	}
 	
 	public void connect () throws UnknownHostException, IOException{
-		socket = new Socket("localhost", 100);
+		socket = new Socket("192.168.1.6", 100);
 	}
 	
 	public void changeMessage(){
