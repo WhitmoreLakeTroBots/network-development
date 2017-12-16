@@ -18,12 +18,12 @@ public class VisionGearReciverLaucher {
 			System.out.println("RUNNING");
 			try{
 			data = recive.reciveGearData();
+			System.out.println("VertOffsetPx: " + data.getVertOffsetPx());
+			data = null;
 			} catch (SocketException s){
 				//s.printStackTrace();
 				recive.acceptConnection();
 			}
-			System.out.println("VertOffsetPx: " + data.getVertOffsetPx());
-			data = null;
 			Thread.sleep(10);
 		}
 	}
