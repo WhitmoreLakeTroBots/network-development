@@ -20,7 +20,12 @@ public class VisionGearMessagerLancher {
 		while(true){
 			System.out.println("RUNNING");
 			message.changeMessage();
+			try{
 			message.sendMessage();
+			} catch (ConnectException c){
+				c.printStackTrace();
+				message.connect();
+			}
 			Thread.sleep(100);
 		}
 	}

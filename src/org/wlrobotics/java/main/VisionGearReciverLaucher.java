@@ -1,8 +1,8 @@
 package org.wlrobotics.java.main;
 
 import java.io.IOException;
+import java.net.SocketException;
 
-import org.wlrobotics.java.main.VisionGearReciver;
 import org.wlrobotics.java.main.visionProto.visionGear;
 
 public class VisionGearReciverLaucher {
@@ -16,7 +16,12 @@ public class VisionGearReciverLaucher {
 		System.out.println("Client found!");
 		while(true){
 			System.out.println("RUNNING");
+			try{
 			data = recive.reciveGearData();
+			} catch (SocketException s){
+				//s.printStackTrace();
+				recive.acceptConnection();
+			}
 			System.out.println("VertOffsetPx: " + data.getVertOffsetPx());
 			data = null;
 			Thread.sleep(10);
