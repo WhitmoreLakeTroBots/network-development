@@ -1,6 +1,7 @@
 package org.wlrobotics.java.main;
 
 import java.io.IOException;
+import java.net.ConnectException;
 import java.net.SocketException;
 
 import org.wlrobotics.java.main.visionProto.visionGear;
