@@ -12,18 +12,24 @@ public class VisionGearReciverLaucher {
 		System.out.println("Starting");
 		visionGear data;
 		VisionGearReciver recive = new VisionGearReciver();
-		System.out.println("Looking for a client...");
-		//recive.acceptConnection();
-		System.out.println("Client found!");
-		while(true){
-			System.out.println("RUNNING");
-			try{
-			data = recive.reciveGearData();
-			System.out.println("VertOffsetPx: " + data.getVertOffsetPx());
-			data = null;
-			} catch (SocketException s){
-				//s.printStackTrace();
-				recive.acceptConnection();
+		// System.out.println("Looking for a client...");
+		// recive.acceptConnection();
+		// System.out.println("Client found!");
+		while (true) {
+			recive.acceptConnection();
+			try {
+				while (true) {
+					System.out.println("RUNNING");
+					data = recive.reciveGearData();
+					System.out.println("VertOffsetPx: " + data.getVertOffsetPx());
+					data = null;
+				}
+			} catch (ConnectException c) {
+				// c.printStackTrace();
+				// recive.acceptConnection();
+			} catch (SocketException s) {
+				// s.printStackTrace();
+				// recive.acceptConnection();
 			}
 			Thread.sleep(10);
 		}

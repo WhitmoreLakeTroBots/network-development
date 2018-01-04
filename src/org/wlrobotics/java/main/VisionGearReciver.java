@@ -15,8 +15,7 @@ public class VisionGearReciver {
 	
 	public VisionGearReciver() throws IOException{
 	serverSocket = new ServerSocket(100);
-	socket = serverSocket.accept();
-	
+	//socket = serverSocket.accept();
 	}
 	
 	void acceptConnection() throws IOException{
